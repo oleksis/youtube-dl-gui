@@ -427,9 +427,14 @@ def extract_data(stdout: str) -> dict[str, str]:
                 data_dictionary["filesize"] = stdout_list[3]
             else:
                 data_dictionary["percent"] = stdout_list[1]
-                data_dictionary["filesize"] = stdout_list[3]
-                data_dictionary["speed"] = stdout_list[5]
-                data_dictionary["eta"] = stdout_list[7]
+                if stdout_list[3] == "~":
+                    data_dictionary["filesize"] = stdout_list[3]+stdout_list[4]
+                    data_dictionary["speed"] = stdout_list[6]
+                    data_dictionary["eta"] = stdout_list[8]
+                else:
+                    data_dictionary["filesize"] = stdout_list[3]
+                    data_dictionary["speed"] = stdout_list[5]
+                    data_dictionary["eta"] = stdout_list[7]
 
         # Get playlist info
         if stdout_list[1] == "Downloading" and stdout_list[2] == "video":
