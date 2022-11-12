@@ -179,11 +179,9 @@ class ListCtrl(wx.ListCtrl, ListCtrlAutoWidthMixin):
         end = -1 if reverse else self._list_index
         step = -1 if reverse else 1
 
-        for index in range(start, end, step):
-            if self.IsSelected(index):
-                return index
-
-        return -1
+        return next(
+            (index for index in range(start, end, step) if self.IsSelected(index)), -1
+        )
 
     def _set_columns(self):
         """Initializes ListCtrl columns.
@@ -620,7 +618,9 @@ class MainFrame(wx.Frame):
 
         if index != -1:
             object_id = self._status_list.GetItemData(index)
-            selected_download_item = self._download_list.get_item(object_id)
+            selected_download_item: DownloadItem = self._download_list.get_item(
+                object_id
+            )
 
             if selected_download_item.stage == "Active":
                 self._create_popup(
@@ -640,14 +640,14 @@ class MainFrame(wx.Frame):
 
             dlg.Destroy()
 
-            options: list[str] = selected_download_item.options
-
             if result:
-                options.append(f"{check_options[0]}")
-                options.append("ffmpeg")
-                options.append(f"{check_options[1]}")
-                options.append(
-                    f"-ss {clip_start.GetSeconds()} -to {clip_end.GetSeconds()}"
+                selected_download_item.options.extend(
+                    (
+                        f"{check_options[0]}",
+                        "ffmpeg",
+                        f"{check_options[1]}",
+                        f"-ss {clip_start.GetSeconds()} -to {clip_end.GetSeconds()}",
+                    )
                 )
 
     # noinspection PyUnusedLocal
@@ -656,18 +656,17 @@ class MainFrame(wx.Frame):
         queued = paused = active = completed = error = 0
 
         for item in self._download_list.get_items():
-            if item.stage == "Paused":
-                paused += 1
-            elif item.stage == "Queued":
-                queued += 1
             if item.stage == "Active":
                 active += 1
                 total_percentage += float(item.progress_stats["percent"].split("%")[0])
-            if item.stage == "Completed":
+            elif item.stage == "Completed":
                 completed += 1
             elif item.stage == "Error":
                 error += 1
-
+            elif item.stage == "Paused":
+                paused += 1
+            elif item.stage == "Queued":
+                queued += 1
         # REFACTOR Store percentage as float in the DownloadItem?
         # REFACTOR DownloadList keep track for each item stage?
 
@@ -1233,11 +1232,10 @@ class MainFrame(wx.Frame):
                     self._status_bar_write(self.SHUTDOWN_MSG)
                 else:
                     self._status_bar_write(self.SHUTDOWN_ERR)
-        else:
-            if self.opt_manager.options["show_completion_popup"]:
-                self._create_popup(
-                    self.DL_COMPLETED_MSG, self.INFO_LABEL, wx.OK | wx.ICON_INFORMATION
-                )
+        elif self.opt_manager.options["show_completion_popup"]:
+            self._create_popup(
+                self.DL_COMPLETED_MSG, self.INFO_LABEL, wx.OK | wx.ICON_INFORMATION
+            )
 
     # noinspection PyUnusedLocal,PyProtectedMember
     def _download_worker_handler(self, signal: str, data: dict[str, Any] | None = None):
@@ -1273,19 +1271,19 @@ class MainFrame(wx.Frame):
         """
         # TODO: REFACTOR Manage better the signal stage
 
-        if signal == "finished":
-            self._print_stats()
-            self._reset_widgets()
-            self.download_manager = None
-            self._app_timer.Stop()
-            self._after_download()
-        elif signal == "closed":
+        if signal == "closed":
             self._status_bar_write(self.CLOSED_MSG)
             self._reset_widgets()
             self.download_manager = None
             self._app_timer.Stop()
         elif signal == "closing":
             self._status_bar_write(self.CLOSING_MSG)
+        elif signal == "finished":
+            self._print_stats()
+            self._reset_widgets()
+            self.download_manager = None
+            self._app_timer.Stop()
+            self._after_download()
             # NOTE Remove from here and downloadmanager
             # since now we have the wx.Timer to check progress
 

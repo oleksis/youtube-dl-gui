@@ -261,7 +261,7 @@ class TabPanel(wx.Panel):
         size: tuple[int, int] | None = None,
     ) -> wx.SpinCtrl:
         if not size:
-            size = (130, -1) if not IS_WINDOWS else self.SPINCTRL_SIZE
+            size = self.SPINCTRL_SIZE if IS_WINDOWS else (130, -1)
         spinctrl = wx.SpinCtrl(self, size=size)
         spinctrl.SetRange(*spin_range)
 

@@ -86,9 +86,7 @@ exec(
 # Get the info from youtube_dl_gui/info.py without importing the package
 exec(
     compile(
-        open(f"{__packagename__}/info.py").read(),
-        __packagename__ + "/info.py",
-        "exec",
+        open(f"{__packagename__}/info.py").read(), f"{__packagename__}/info.py", "exec"
     )
 )
 

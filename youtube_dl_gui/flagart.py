@@ -13,21 +13,23 @@ Copyright Mark James (mjames@gmail.com)
 This module is (c) 2006 Riaan Booysen and licensed under the Python license.
 
 """
+
 from __future__ import annotations
 
 from wx.lib.embeddedimage import PyEmbeddedImage
 
-catalog: dict[str, PyEmbeddedImage] = {}
 index: list[str] = ["AE"]
 
-catalog["AE"] = PyEmbeddedImage(
-    "iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAAA3NCSVQICAjb4U/gAAAA3UlE"
-    "QVQokYWOsU0DUBBD3ye/pKOKBF2YIiUd89BFTMEUabNJNiASTIBozr47igQBRcjTybrClj2a"
-    "HwoWz2AwFAQY4s8zATYboKtG1dNjujLLbrvsktIuqazU7mU3Aeh+eyeTzNcPZaZaSqmkVGRE"
-    "hVJ313enhq4+ulvaPmz7DGOMw/1hFoxM7LaRz7m7G6iqCeBs6XJgDNsT6HTbrfg/MLqBWTCk"
-    "jsDuiH/2dHdVzYKF3RJSS+v1OiIknVRShC07V6vVfr+fBVcyy2VLOG+tI7aPaju/AcYn1K+7"
-    "4QJfesZpBoG4DtcAAAAASUVORK5CYII="
-)
+catalog: dict[str, PyEmbeddedImage] = {
+    "AE": PyEmbeddedImage(
+        "iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAAA3NCSVQICAjb4U/gAAAA3UlE"
+        "QVQokYWOsU0DUBBD3ye/pKOKBF2YIiUd89BFTMEUabNJNiASTIBozr47igQBRcjTybrClj2a"
+        "HwoWz2AwFAQY4s8zATYboKtG1dNjujLLbrvsktIuqazU7mU3Aeh+eyeTzNcPZaZaSqmkVGRE"
+        "hVJ313enhq4+ulvaPmz7DGOMw/1hFoxM7LaRz7m7G6iqCeBs6XJgDNsT6HTbrfg/MLqBWTCk"
+        "jsDuiH/2dHdVzYKF3RJSS+v1OiIknVRShC07V6vVfr+fBVcyy2VLOG+tI7aPaju/AcYn1K+7"
+        "4QJfesZpBoG4DtcAAAAASUVORK5CYII="
+    )
+}
 
 index.append("AF")
 catalog["AF"] = PyEmbeddedImage(

@@ -147,16 +147,15 @@ class OptionsParser:
                 if value != option.default_value:
                     if "-x" not in options_list:
                         options_list.append("-x")
-                    options_list.append(option.flag)
-                    options_list.append(str(value))
-
+                    options_list.extend((option.flag, str(value)))
                     # NOTE Temp fix
                     # If current 'audio_quality' is not the default one ('5')
                     # then append the audio quality flag and value to the
                     # options list
                     if options_dict["audio_quality"] != "5":
-                        options_list.append("--audio-quality")
-                        options_list.append(str(options_dict["audio_quality"]))
+                        options_list.extend(
+                            ("--audio-quality", str(options_dict["audio_quality"]))
+                        )
             elif option.name == "audio_quality":
                 # If the '--audio-quality' is not already in the options list
                 # from the above branch then follow the standard procedure.
@@ -169,8 +168,7 @@ class OptionsParser:
                     value = options_dict[option.name]
                     assert 0 <= int(value) <= 9
 
-                    options_list.append(option.flag)
-                    options_list.append(str(value))
+                    options_list.extend((option.flag, str(value)))
             elif option.check_requirements(options_dict):
                 value = options_dict[option.name]
 

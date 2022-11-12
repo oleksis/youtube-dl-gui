@@ -23,7 +23,7 @@ class TestListBoxWithHeaders(unittest.TestCase):
         self.listbox = ListBoxWithHeaders(self.frame)
 
         self.listbox.add_header("Header")
-        self.listbox.add_items(["item%s" % i for i in range(10)])
+        self.listbox.add_items([f"item{i}" for i in range(10)])
 
     def tearDown(self):
         self.frame.Destroy()
@@ -159,7 +159,7 @@ class TestListBoxWithHeaders(unittest.TestCase):
     def test_add_item_with_prefix(self, mock_append):
         self.listbox.add_item("new_item")
         mock_append.assert_called_once_with(
-            ListBoxWithHeaders.TEXT_PREFIX + "new_item", None
+            f"{ListBoxWithHeaders.TEXT_PREFIX}new_item", None
         )
 
     @mock.patch("wx.ListBox.Append")
@@ -172,8 +172,8 @@ class TestListBoxWithHeaders(unittest.TestCase):
         self.listbox.AppendItems(["new_item1", "new_item2"])
         mock_append.assert_called_once_with(
             [
-                ListBoxWithHeaders.TEXT_PREFIX + "new_item1",
-                ListBoxWithHeaders.TEXT_PREFIX + "new_item2",
+                f"{ListBoxWithHeaders.TEXT_PREFIX}new_item1",
+                f"{ListBoxWithHeaders.TEXT_PREFIX}new_item2",
             ]
         )
 

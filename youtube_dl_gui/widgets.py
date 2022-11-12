@@ -1,7 +1,9 @@
 # type: ignore[misc]
 """Custom widgets for yt-dlg"""
+
 from __future__ import annotations
 
+import contextlib
 from datetime import timedelta
 from pathlib import Path
 from typing import TYPE_CHECKING, Callable
@@ -59,11 +61,13 @@ class ListBoxWithHeaders(wx.ListBox):
         id=wx.ID_ANY,
         pos=wx.DefaultPosition,
         size=wx.DefaultSize,
-        choices=[],
+        choices=None,
         style=0,
         validator=wx.DefaultValidator,
         name=NAME,
     ) -> None:
+        if choices is None:
+            choices = []
         super().__init__(parent, id, pos, size, choices, style, validator, name)
         self.__headers: set[str] = set()
 
@@ -81,11 +85,7 @@ class ListBoxWithHeaders(wx.ListBox):
     def _disable_header_selection(self, event) -> None:
         """Stop event propagation if the selected item is a header."""
         row = self.HitTest(event.GetPosition())
-        event_skip = True
-
-        if row != wx.NOT_FOUND and self.GetString(row) in self.__headers:
-            event_skip = False
-
+        event_skip = row == wx.NOT_FOUND or self.GetString(row) not in self.__headers
         event.Skip(event_skip)
 
     def _on_listbox(self, event) -> None:
@@ -327,7 +327,7 @@ class DoubleStageButton(wx.Button):
 
         assert isinstance(labels, tuple) and isinstance(bitmaps, tuple)
         assert len(labels) == 2
-        assert len(bitmaps) in [0, 2]
+        assert len(bitmaps) in {0, 2}
 
         self.labels = labels
         self.bitmaps = bitmaps
@@ -604,13 +604,10 @@ class ClipDialog(wx.Dialog):
 
         for idx, opt in enumerate(self.download_item.options):
             if opt in self.CHECK_OPTIONS:
-                try:
+                with contextlib.suppress(IndexError):
                     opt_arg = self.download_item.options[idx + 1]
                     if opt_arg == "ffmpeg" or "-ss" in opt_arg or "-to" in opt_arg:
                         self.download_item.options.pop(idx + 1)
-                except IndexError:
-                    pass
-
                 continue
 
             options.append(opt)

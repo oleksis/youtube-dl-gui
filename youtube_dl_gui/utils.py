@@ -224,11 +224,9 @@ def get_locale_file() -> str | None:
     """
     SEARCH_DIRS = get_search_dirs("locale")
 
-    for directory in SEARCH_DIRS:
-        if directory.is_dir():
-            return str(directory)
-
-    return None
+    return next(
+        (str(directory) for directory in SEARCH_DIRS if directory.is_dir()), None
+    )
 
 
 # noinspection PyPep8Naming
@@ -331,8 +329,4 @@ def get_default_lang() -> str:
 
 def get_key(string: str, dictionary: dict[str, str], default: str = "") -> str:
     """Get key from a value in Dictionary. Return default if key doesn't exist"""
-    for key, value in dictionary.items():
-        if value == string:
-            default = key
-            return default
-    return default
+    return next((key for key, value in dictionary.items() if value == string), default)

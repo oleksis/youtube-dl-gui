@@ -27,7 +27,7 @@ class TestCustomComboBox(unittest.TestCase):
 
         # Call directly the ListBoxWithHeaders methods
         self._lb_popup_ctr.add_header("Header")
-        self._lb_popup_ctr.add_items(["item%s" % i for i in range(10)])
+        self._lb_popup_ctr.add_items([f"item{i}" for i in range(10)])
 
     def tearDown(self):
         self.frame.Destroy()

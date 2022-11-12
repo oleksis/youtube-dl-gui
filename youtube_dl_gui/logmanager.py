@@ -48,7 +48,7 @@ class LogManager:
         fmt = "%(levelname)s-%(threadName)s-%(message)s"
 
         if self.add_time:
-            fmt = "%(asctime)s-" + fmt
+            fmt = f"%(asctime)s-{fmt}"
 
         self.handler.setFormatter(logging.Formatter(fmt=fmt))
         self.logger.addHandler(self.handler)
@@ -57,10 +57,7 @@ class LogManager:
         """Return log file size in Bytes."""
         path = Path(self.log_file)
 
-        if not path.exists():
-            return 0
-
-        return path.stat().st_size
+        return path.stat().st_size if path.exists() else 0
 
     def clear(self) -> None:
         """Clear log file."""
@@ -74,4 +71,4 @@ class LogManager:
             data (str): String to write to the log file.
 
         """
-        self.logger.debug(str(data))
+        self.logger.debug(data)

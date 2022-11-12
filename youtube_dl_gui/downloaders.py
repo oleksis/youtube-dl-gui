@@ -5,8 +5,10 @@ This module contains the actual downloaders responsible
 for downloading the video files.
 
 """
+
 from __future__ import annotations
 
+import contextlib
 import os
 import re
 import signal
@@ -167,12 +169,8 @@ class YoutubeDLDownloader:
         while self._proc_is_alive():
             stdout: str = ""
             if not self._proc.stdout.closed:
-                try:
+                with contextlib.suppress(ValueError):
                     stdout = self._proc.stdout.readline().rstrip()
-                except ValueError:
-                    # I/O operation on closed file
-                    pass
-
             if stdout:
                 data_dict = extract_data(stdout)
                 self._extract_info(data_dict)
@@ -199,28 +197,27 @@ class YoutubeDLDownloader:
 
     def stop(self) -> None:
         """Stop the download process and set return code to STOPPED."""
-        if self._proc_is_alive():
-            self._proc.stdout.close()
-            self._proc.stderr.close()
+        if not self._proc_is_alive():
+            return
 
-            try:
-                if IS_WINDOWS:
-                    # os.killpg is not available on Windows
-                    # See: https://bugs.python.org/issue5115
-                    self._proc.kill()
+        self._proc.stdout.close()
+        self._proc.stderr.close()
 
-                    # When we kill the child process on Windows the return code
-                    # gets set to 1, so we want to reset the return code back to 0
-                    # in order to avoid creating logging output in the download(...)
-                    # method
-                    self._proc.returncode = 0
-                else:
-                    # TODO: Test in Unix os.killpg ?
-                    os.killpg(self._proc.pid, signal.SIGKILL)  # type: ignore
-            except ProcessLookupError:
-                pass
+        with contextlib.suppress(ProcessLookupError):
+            if IS_WINDOWS:
+                # os.killpg is not available on Windows
+                # See: https://bugs.python.org/issue5115
+                self._proc.kill()
 
-            self._set_returncode(self.STOPPED)
+                # When we kill the child process on Windows the return code
+                # gets set to 1, so we want to reset the return code back to 0
+                # in order to avoid creating logging output in the download(...)
+                # method
+                self._proc.returncode = 0
+            else:
+                # TODO: Test in Unix os.killpg ?
+                os.killpg(self._proc.pid, signal.SIGKILL)  # type: ignore
+        self._set_returncode(self.STOPPED)
 
     def close(self) -> None:
         """Destructor like function for the object."""

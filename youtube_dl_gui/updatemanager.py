@@ -75,7 +75,7 @@ class UpdateThread(Thread):
         if self.cli_backend == YTDLP_BIN:
             self.LATEST_YOUTUBE_DL = "https://github.com/yt-dlp/yt-dlp/releases/"
             self.LATEST_YOUTUBE_DL_API = (
-                self.GITHUB_API + "repos/yt-dlp/yt-dlp/releases/latest"
+                f"{self.GITHUB_API}repos/yt-dlp/yt-dlp/releases/latest"
             )
 
         self.name = "UpdateManager"

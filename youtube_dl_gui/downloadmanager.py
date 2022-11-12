@@ -164,9 +164,7 @@ class DownloadItem:
             if key in self.progress_stats:
                 value = stats_dict.get(key)
 
-                self.progress_stats[key] = (
-                    self.default_values[key] if not value else value
-                )
+                self.progress_stats[key] = value or self.default_values[key]
         # Extract extra stuff
         if "playlist_index" in stats_dict:
             self.playlist_index_changed = True
@@ -218,9 +216,11 @@ class DownloadItem:
             self._stage = self.STAGES[4]
 
     def __eq__(self, other: object) -> bool:
-        if not isinstance(other, DownloadItem):
-            return NotImplemented
-        return self.object_id == other.object_id
+        return (
+            self.object_id == other.object_id
+            if isinstance(other, DownloadItem)
+            else NotImplemented
+        )
 
     def __repr__(self) -> str:
         return f"<{self.__class__.__name__}({self.url},{self.options})>"
@@ -516,11 +516,7 @@ class DownloadManager(Thread):
             self.parent.update_thread = None
 
     def _get_worker(self) -> Worker | None:
-        for worker in self._workers:
-            if worker.available():
-                return worker
-
-        return None
+        return next((worker for worker in self._workers if worker.available()), None)
 
     def _jobs_done(self) -> bool:
         """Returns True if the workers have finished their jobs else False."""
@@ -577,7 +573,7 @@ class Worker(Thread):
         self.opt_manager = opt_manager
         self.log_manager = log_manager
         self.worker = worker or Worker.worker_count
-        self.setName("Worker_" + str(worker))
+        self.setName(f"Worker_{worker}")
 
         self._downloader = YoutubeDLDownloader(
             youtubedl_path, self._data_hook, self._log_data
