@@ -4,13 +4,14 @@
 # Translators:
 # Mitsuya Tsujikawa <mtujikawa@gmail.com>, 2017
 # Oleksis Fraga Menéndez, 2022
+# maboroshin, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: yt-dlg 1.8.4\n"
 "POT-Creation-Date: 2022-10-17 03:54-0400\n"
-"PO-Revision-Date: 2022-10-17 09:35+0000\n"
-"Last-Translator: Mitsuya Tsujikawa <mtujikawa@gmail.com>\n"
+"PO-Revision-Date: 2023-01-17 09:35+0000\n"
+"Last-Translator: maboroshin\n"
 "Language-Team: Japanese (Japan) (https://www.transifex.com/yt-dlg/teams/154205/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,11 +22,11 @@ msgstr ""
 
 #: youtube_dl_gui/app.py:148
 msgid "Failed to locate CLI Backend and updates are disabled"
-msgstr ""
+msgstr "CLIバックエンドの発見に失敗 更新が無効化されました"
 
 #: youtube_dl_gui/app.py:149
 msgid "Error"
-msgstr ""
+msgstr "エラー"
 
 #: youtube_dl_gui/formats.py:10
 msgid "ID"
@@ -49,7 +50,7 @@ msgstr "タイトル + ID + 品質"
 
 #: youtube_dl_gui/formats.py:15
 msgid "Custom"
-msgstr "カスタム"
+msgstr "指定する"
 
 #: youtube_dl_gui/formats.py:18 youtube_dl_gui/mainframe.py:419
 #: youtube_dl_gui/mainframe.py:420
@@ -66,7 +67,7 @@ msgstr "更新"
 
 #: youtube_dl_gui/mainframe.py:243
 msgid "Setting"
-msgstr ""
+msgstr "設定"
 
 #: youtube_dl_gui/mainframe.py:244 youtube_dl_gui/optionsframe.py:39
 msgid "Options"
@@ -94,7 +95,7 @@ msgstr "追加"
 
 #: youtube_dl_gui/mainframe.py:250
 msgid "Download list"
-msgstr "ダウンロードリスト"
+msgstr "ダウンロード一覧"
 
 #: youtube_dl_gui/mainframe.py:251 youtube_dl_gui/mainframe.py:794
 #: youtube_dl_gui/mainframe.py:824
@@ -128,16 +129,16 @@ msgstr "ダウンロード開始"
 
 #: youtube_dl_gui/mainframe.py:258
 msgid "About"
-msgstr "製品情報"
+msgstr "アプリの情報"
 
 #: youtube_dl_gui/mainframe.py:259
 msgid "View Log"
-msgstr "ログの表示"
+msgstr "ログを表示"
 
 #: youtube_dl_gui/mainframe.py:261
 msgid ""
 "Downloaded {0} URL(s) in {1} day(s) {2} hour(s) {3} minute(s) {4} second(s)"
-msgstr ""
+msgstr "ダウンロード済み {0}URL | {1}日 {2}時間 {3}分 {4}秒"
 
 #: youtube_dl_gui/mainframe.py:265
 msgid "Downloads completed"
@@ -147,7 +148,7 @@ msgstr "ダウンロード完了"
 msgid ""
 "Total Progress: {0:.1f}% | Queued ({1}) Paused ({2}) Active ({3}) Completed "
 "({4}) Error ({5})"
-msgstr "進捗状況: {0:.1f}% | 待機 ({1}) 停止 ({2}) 進行中 ({3}) 完了 ({4}) エラー ({5})"
+msgstr "全体の進行状態: {0:.1f}% | 待機:{1} 停止:{2} 進行中:{3} 完了:{4} エラー:{5}"
 
 #: youtube_dl_gui/mainframe.py:270
 msgid "Stopping downloads"
@@ -159,7 +160,7 @@ msgstr "ダウンロードを停止しました"
 
 #: youtube_dl_gui/mainframe.py:272
 msgid "You need to provide at least one URL"
-msgstr "最低でも1つはURLを入力する必要があります"
+msgstr "少なくとも1つのURLを入力してください"
 
 #: youtube_dl_gui/mainframe.py:273
 msgid "Downloads started"
@@ -167,11 +168,11 @@ msgstr "ダウンロードを開始しました"
 
 #: youtube_dl_gui/mainframe.py:274
 msgid "Choose Directory"
-msgstr "フォルダを選択してください"
+msgstr "フォルダを選択"
 
 #: youtube_dl_gui/mainframe.py:276
 msgid "Download in progress. Please wait for all downloads to complete"
-msgstr "ダウンロード中です。すべて完了するまでお待ちください。"
+msgstr "ダウンロード中。すべて完了するまでお待ちください。"
 
 #: youtube_dl_gui/mainframe.py:279
 msgid "Update already in progress"
@@ -179,23 +180,23 @@ msgstr "更新中です"
 
 #: youtube_dl_gui/mainframe.py:281
 msgid "Downloading latest CLI Backend. Please wait..."
-msgstr ""
+msgstr "CLIバックエンドの最新版をダウンロード中。お待ちください..."
 
 #: youtube_dl_gui/mainframe.py:282
 msgid "CLI Backend download failed [{0}]"
-msgstr ""
+msgstr "CLIバックエンドのダウンロードに失敗 [{0}]"
 
 #: youtube_dl_gui/mainframe.py:283
 msgid "Successfully downloaded CLI Backend."
-msgstr ""
+msgstr "CLIバックエンドのダウンロードに成功しました。"
 
 #: youtube_dl_gui/mainframe.py:285
 msgid "Unable to open directory: '{dir}'. The specified path does not exist"
-msgstr "フォルダを開くことができません: '{dir}'。指定されたパスが存在しません。"
+msgstr "フォルダを開けません: '{dir}'。指定のパスが存在しません"
 
 #: youtube_dl_gui/mainframe.py:288
 msgid "Error while shutting down. Make sure you typed the correct password"
-msgstr "シャットダウンの際にエラーが発生しました。必ず正確なパスワードを入力したことを確認してください"
+msgstr "シャットダウン中にエラーが発生。入力したパスワードが正しいか確認してください"
 
 #: youtube_dl_gui/mainframe.py:291
 msgid "Shutting down system"
@@ -215,7 +216,7 @@ msgstr "パーセント"
 
 #: youtube_dl_gui/mainframe.py:297
 msgid "ETA"
-msgstr "ETA"
+msgstr "予想時間"
 
 #: youtube_dl_gui/mainframe.py:298
 msgid "Speed"
@@ -239,7 +240,7 @@ msgstr ""
 
 #: youtube_dl_gui/mainframe.py:394
 msgid "Open destination"
-msgstr "保存先フォルダを開く"
+msgstr "保存フォルダを開く"
 
 #: youtube_dl_gui/mainframe.py:395
 msgid "Re-enter"
@@ -263,7 +264,7 @@ msgstr "音声"
 
 #: youtube_dl_gui/mainframe.py:792
 msgid "Remove all"
-msgstr "全消去"
+msgstr "すべて消去"
 
 #: youtube_dl_gui/mainframe.py:792
 msgid "Remove completed"
@@ -275,11 +276,11 @@ msgstr "項目が選択されていません。操作項目を選択してくだ
 
 #: youtube_dl_gui/mainframe.py:823
 msgid "Are you sure you want to remove selected items?"
-msgstr "選択アイテムを消去してよろしいですか?"
+msgstr "選択項目を消去しますか?"
 
 #: youtube_dl_gui/mainframe.py:838
 msgid "Item is active, cannot remove"
-msgstr "使用中のため削除できません"
+msgstr "進行中のため削除できません"
 
 #: youtube_dl_gui/mainframe.py:866
 msgid "Item is not completed"
@@ -287,11 +288,11 @@ msgstr "未完了のアイテムです"
 
 #: youtube_dl_gui/mainframe.py:974
 msgid "Update in progress. Please wait for the update to complete"
-msgstr "アップデート中です。完了までお待ちください"
+msgstr "更新中です。完了までお待ちください"
 
 #: youtube_dl_gui/mainframe.py:1031
 msgid "Logging is disabled"
-msgstr "ロギング無効"
+msgstr "ログ記録は無効になっています"
 
 #: youtube_dl_gui/mainframe.py:1221
 msgid "Shutdown"
@@ -309,11 +310,11 @@ msgstr "ダウンロードする項目がありません"
 msgid ""
 "Updates are disabled for your system. Please use the system's package "
 "manager to update the CLI Backend."
-msgstr ""
+msgstr "このシステムではダウンロードが無効化されています。CLIバックエンドの更新にはパッケージ管理システムを利用してください"
 
 #: youtube_dl_gui/mainframe.py:1420
 msgid "Are you sure you want to exit?"
-msgstr "終了してよろしいですか?"
+msgstr "終了しますか?"
 
 #: youtube_dl_gui/mainframe.py:1421
 msgid "Exit"
@@ -321,7 +322,7 @@ msgstr "終了"
 
 #: youtube_dl_gui/optionsframe.py:58
 msgid "Reset"
-msgstr "リセット"
+msgstr "初期化"
 
 #: youtube_dl_gui/optionsframe.py:59
 msgid "Close"
@@ -341,27 +342,27 @@ msgstr "ダウンロード"
 
 #: youtube_dl_gui/optionsframe.py:74
 msgid "Advanced"
-msgstr "高度"
+msgstr "詳細"
 
 #: youtube_dl_gui/optionsframe.py:75
 msgid "Extra"
-msgstr "その他"
+msgstr "追加"
 
 #: youtube_dl_gui/optionsframe.py:333 youtube_dl_gui/optionsframe.py:722
 msgid "Albanian"
-msgstr ""
+msgstr "アルバニア語"
 
 #: youtube_dl_gui/optionsframe.py:334
 msgid "Arabic"
-msgstr ""
+msgstr "アラビア語"
 
 #: youtube_dl_gui/optionsframe.py:335
 msgid "Cuba"
-msgstr ""
+msgstr "キューバ"
 
 #: youtube_dl_gui/optionsframe.py:336
 msgid "Czech"
-msgstr ""
+msgstr "チェコ語"
 
 #: youtube_dl_gui/optionsframe.py:337 youtube_dl_gui/optionsframe.py:712
 msgid "German"
@@ -382,15 +383,15 @@ msgstr "イタリア語"
 
 #: youtube_dl_gui/optionsframe.py:341
 msgid "Japanese"
-msgstr ""
+msgstr "日本語"
 
 #: youtube_dl_gui/optionsframe.py:342
 msgid "Korean"
-msgstr ""
+msgstr "韓国語"
 
 #: youtube_dl_gui/optionsframe.py:343 youtube_dl_gui/optionsframe.py:716
 msgid "Polish"
-msgstr ""
+msgstr "ポーランド語"
 
 #: youtube_dl_gui/optionsframe.py:344 youtube_dl_gui/optionsframe.py:717
 msgid "Portuguese"
@@ -402,7 +403,7 @@ msgstr "ロシア語"
 
 #: youtube_dl_gui/optionsframe.py:346
 msgid "Slovak"
-msgstr ""
+msgstr "スロバキア語"
 
 #: youtube_dl_gui/optionsframe.py:347 youtube_dl_gui/optionsframe.py:719
 msgid "Spanish"
@@ -410,11 +411,11 @@ msgstr "スペイン語"
 
 #: youtube_dl_gui/optionsframe.py:348
 msgid "Simplified Chinese"
-msgstr ""
+msgstr "中国語 (簡体)"
 
 #: youtube_dl_gui/optionsframe.py:349
 msgid "Traditional Chinese"
-msgstr ""
+msgstr "中国語 (繁体)"
 
 #: youtube_dl_gui/optionsframe.py:352
 msgid "Language"
@@ -438,7 +439,7 @@ msgstr "詳細設定"
 
 #: youtube_dl_gui/optionsframe.py:371
 msgid "Dark theme"
-msgstr ""
+msgstr "ダーク テーマ"
 
 #: youtube_dl_gui/optionsframe.py:373
 msgid "Confirm on exit"
@@ -462,7 +463,7 @@ msgstr "SUDO パスワード"
 
 #: youtube_dl_gui/optionsframe.py:494 youtube_dl_gui/optionsframe.py:1013
 msgid "In order for the changes to take effect please restart {0}"
-msgstr "変更を反映するに再起動してください {0}"
+msgstr "変更を反映するには {0} 再起動してください"
 
 #: youtube_dl_gui/optionsframe.py:497 youtube_dl_gui/optionsframe.py:1016
 msgid "Restart"
@@ -494,7 +495,7 @@ msgstr "後処理の設定"
 
 #: youtube_dl_gui/optionsframe.py:594
 msgid "Keep original files"
-msgstr "オリジナルファイルを残す"
+msgstr "元のファイルを残す"
 
 #: youtube_dl_gui/optionsframe.py:596
 msgid "Extract audio from video file"
@@ -530,7 +531,7 @@ msgstr "トルコ語"
 
 #: youtube_dl_gui/optionsframe.py:723
 msgid "Chinese"
-msgstr ""
+msgstr "中国語"
 
 #: youtube_dl_gui/optionsframe.py:727
 msgid "None"
@@ -538,15 +539,15 @@ msgstr "なし"
 
 #: youtube_dl_gui/optionsframe.py:728
 msgid "Automatic subtitles (YOUTUBE ONLY)"
-msgstr "自動字幕 (Youtubeのみ)"
+msgstr "自動字幕 (YouTubeのみ)"
 
 #: youtube_dl_gui/optionsframe.py:729
 msgid "All available subtitles"
-msgstr "すべての字幕"
+msgstr "すべての利用可能な字幕"
 
 #: youtube_dl_gui/optionsframe.py:730
 msgid "Subtitles by language"
-msgstr "字幕言語"
+msgstr "字幕の言語"
 
 #: youtube_dl_gui/optionsframe.py:733
 msgid "Subtitles"
@@ -554,7 +555,7 @@ msgstr "字幕"
 
 #: youtube_dl_gui/optionsframe.py:739
 msgid "Subtitles options"
-msgstr "字幕設定"
+msgstr "字幕のオプション"
 
 #: youtube_dl_gui/optionsframe.py:741
 msgid "Embed subtitles into video file (mp4 ONLY)"
@@ -578,7 +579,7 @@ msgstr "最小"
 
 #: youtube_dl_gui/optionsframe.py:914
 msgid "Retries"
-msgstr "リトライ"
+msgstr "再試行"
 
 #: youtube_dl_gui/optionsframe.py:917
 msgid "Authentication"
@@ -594,7 +595,7 @@ msgstr "パスワード"
 
 #: youtube_dl_gui/optionsframe.py:923
 msgid "Video password"
-msgstr "ビデオパスワード"
+msgstr "動画のパスワード"
 
 #: youtube_dl_gui/optionsframe.py:926
 msgid "Network"
@@ -614,7 +615,7 @@ msgstr "リファラー(Referer)"
 
 #: youtube_dl_gui/optionsframe.py:935
 msgid "Logging"
-msgstr "ロギング"
+msgstr "ログ記録"
 
 #: youtube_dl_gui/optionsframe.py:938
 msgid "Enable log"
@@ -630,19 +631,19 @@ msgstr "消去"
 
 #: youtube_dl_gui/optionsframe.py:1062
 msgid "CLI Backend"
-msgstr ""
+msgstr "CLIバックエンド"
 
 #: youtube_dl_gui/optionsframe.py:1066
 msgid "CLI Backend command line options (e.g. --help)"
-msgstr ""
+msgstr "CLIバックエンド コマンドラインオプション(詳細は --help)"
 
 #: youtube_dl_gui/optionsframe.py:1070
 msgid "Extra options"
-msgstr "追加設定"
+msgstr "追加のオプション"
 
 #: youtube_dl_gui/optionsframe.py:1072
 msgid "Debug CLI Backend"
-msgstr ""
+msgstr "デバッグCLI"
 
 #: youtube_dl_gui/optionsframe.py:1073
 msgid "Ignore errors"
@@ -650,7 +651,7 @@ msgstr "エラーを無視"
 
 #: youtube_dl_gui/optionsframe.py:1074
 msgid "Ignore CLI Backend config"
-msgstr ""
+msgstr "CLIの設定を無視"
 
 #: youtube_dl_gui/optionsframe.py:1075
 msgid "No mtime"
@@ -662,11 +663,11 @@ msgstr "ネイティブHLS優先"
 
 #: youtube_dl_gui/widgets.py:373
 msgid "Yes"
-msgstr ""
+msgstr "はい"
 
 #: youtube_dl_gui/widgets.py:374
 msgid "No"
-msgstr ""
+msgstr "いいえ"
 
 #: youtube_dl_gui/widgets.py:440 youtube_dl_gui/widgets.py:696
 msgid "Cancel"
@@ -682,7 +683,7 @@ msgstr ""
 
 #: youtube_dl_gui/widgets.py:665
 msgid "Invalid timespan"
-msgstr ""
+msgstr "タイムスタンプが無効"
 
 #: youtube_dl_gui/widgets.py:695
 msgid "OK"
@@ -690,4 +691,4 @@ msgstr "OK"
 
 #: youtube_dl_gui/widgets.py:758
 msgid "Log Viewer"
-msgstr "ログビュワー"
+msgstr "ログの閲覧"
