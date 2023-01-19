@@ -4,14 +4,14 @@
 # Translators:
 # Mitsuya Tsujikawa <mtujikawa@gmail.com>, 2017
 # Oleksis Fraga Menéndez, 2022
-# maboroshin, 2022
+# maboroshin, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: yt-dlg 1.8.4\n"
 "POT-Creation-Date: 2022-10-17 03:54-0400\n"
-"PO-Revision-Date: 2023-01-17 09:35+0000\n"
-"Last-Translator: maboroshin\n"
+"PO-Revision-Date: 2022-10-18 02:39+0000\n"
+"Last-Translator: maboroshin, 2023\n"
 "Language-Team: Japanese (Japan) (https://www.transifex.com/yt-dlg/teams/154205/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -236,7 +236,7 @@ msgstr "コマンドをコピー"
 
 #: youtube_dl_gui/mainframe.py:393 youtube_dl_gui/widgets.py:517
 msgid "Clip Multimedia"
-msgstr ""
+msgstr "マルチメディアを切り取り"
 
 #: youtube_dl_gui/mainframe.py:394
 msgid "Open destination"
@@ -248,7 +248,7 @@ msgstr "再登録"
 
 #: youtube_dl_gui/mainframe.py:627
 msgid "Item is active, can not set the multimedia clip"
-msgstr ""
+msgstr "進行中のため切り取りの設定はできません"
 
 #: youtube_dl_gui/mainframe.py:702
 msgid "Resume"
@@ -675,11 +675,11 @@ msgstr "キャンセル"
 
 #: youtube_dl_gui/widgets.py:529
 msgid "Clip start"
-msgstr ""
+msgstr "切り取り開始"
 
 #: youtube_dl_gui/widgets.py:549
 msgid "Clip end"
-msgstr ""
+msgstr "切り取り終了"
 
 #: youtube_dl_gui/widgets.py:665
 msgid "Invalid timespan"
