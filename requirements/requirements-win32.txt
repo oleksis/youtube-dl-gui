@@ -1,6 +1,6 @@
 altgraph==0.17.3
 attrdict3==2.0.2
-future==0.18.2
+future==0.18.3
 numpy==1.24.1
 pefile==2022.5.30
 pillow==9.4.0
