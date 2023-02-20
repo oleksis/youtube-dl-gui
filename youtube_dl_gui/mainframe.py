@@ -1333,11 +1333,11 @@ class MainFrame(wx.Frame):
         It also adds a new line at the end of the data if not exist.
 
         """
-        if wx.TheClipboard.IsOpened():
-            return
+        if not wx.TheClipboard.IsOpened():
+            wx.TheClipboard.Open()
 
-        if wx.TheClipboard.Open():
-            if wx.TheClipboard.IsSupported(wx.DataFormat(wx.DF_TEXT)):
+        if wx.TheClipboard.IsOpened():
+            if wx.TheClipboard.IsSupported(wx.DataFormat(wx.DF_UNICODETEXT)):
                 data = wx.TextDataObject()
                 wx.TheClipboard.GetData(data)
 
