@@ -1,5 +1,5 @@
 numpy==1.24.3
-pillow==10.0.0
+pillow==10.0.1
 pypubsub==4.0.3
 six==1.16.0
 wxpython<=4.2.1,>=4.0.7.post2
