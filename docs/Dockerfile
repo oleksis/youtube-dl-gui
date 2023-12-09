@@ -1,4 +1,4 @@
-FROM ruby:3.1.3-slim-bullseye as jekyll
+FROM ruby:slim-bullseye as jekyll
 # https://github.com/BretFisher/jekyll-serve/blob/main/Dockerfile
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
