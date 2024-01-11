@@ -1,5 +1,5 @@
 MANIFEST
-*.pyc
+*.py[co]
 *.mo
 .piptools
 new.po
@@ -81,3 +81,12 @@ missing-libraries.txt
 missing-stage-packages.yaml
 yt-dlg_*.snap
 squashfs-root/
+
+# just sane ignores
+.*.sw[po]
+*.bak
+*.BAK
+*.orig
+*.class
+.cvsignore
+Thumbs.db
