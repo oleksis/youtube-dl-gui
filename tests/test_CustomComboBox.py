@@ -50,7 +50,7 @@ class TestCustomComboBox(unittest.TestCase):
 
     # wx.ComboBox methods
     # Not all of them since most of them are calls to ListBoxWithHeaders
-    # methods and we already have tests for those
+    # methods, and we already have tests for those
 
     def test_is_list_empty_false(self):
         self.assertFalse(self._popup_ctrl.IsListEmpty())

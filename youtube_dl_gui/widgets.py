@@ -70,7 +70,7 @@ class ListBoxWithHeaders(wx.ListBox):
         super().__init__(parent, id, pos, size, choices, style, validator, name)
         self.__headers: set[str] = set()
 
-        # Ignore all key events i'm bored to handle the header selection
+        # Ignore all key events I'm bored to handle the header selection
         self.Bind(wx.EVT_KEY_DOWN, lambda event: None)
 
         # Make sure that a header is never selected

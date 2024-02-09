@@ -4,7 +4,7 @@
 [![build result](https://build.opensuse.org/projects/home:oleksis/packages/yt-dlg/badge.svg?type=default)](https://build.opensuse.org/package/show/home:oleksis/yt-dlg)
 
 # yt-dlg
-A cross platform front-end GUI of the popular [youtube-dl](https://github.com/ytdl-org/youtube-dl/) media downloader written in wxPython. [Supported sites](http://ytdl-org.github.io/youtube-dl/supportedsites.html)
+A cross-platform front-end GUI of the popular [youtube-dl](https://github.com/ytdl-org/youtube-dl/) media downloader written in wxPython. [Supported sites](http://ytdl-org.github.io/youtube-dl/supportedsites.html)
 
 ## Screenshots
 ![youtube-dl-gui main window](https://raw.githubusercontent.com/oleksis/youtube-dl-gui/master/docs/img/yt-dlg_ui.gif)
@@ -50,7 +50,7 @@ winget install -e --id yt-dlg.yt-dlg
 > **Note**
 > The latest version compatible with Python 3.6.1 is [yt-dlg v1.8.2](https://github.com/oleksis/youtube-dl-gui/releases/tag/v1.8.2)
 
-In Windows we have the following options:
+In Windows, we have the following options:
 - Use the [Dev Container](.devcontainer/devcontainer.json) configuration file
 - Windows [Development](https://github.com/oleksis/youtube-dl-gui/wiki/development#windows-development-environment) Environment
 - Set up a [WSL development environment](https://learn.microsoft.com/en-us/windows/wsl/setup/environment)
@@ -282,7 +282,7 @@ locale  -av
 ```
 
 ### Windows Subsystem for Linux
-Some issues is possible. Can read more in: [Troubleshooting GUI Linux apps on openSUSE on WSLg](https://boxofcables.dev/why-do-apps-look-weird-on-wslg-on-opensuse/)
+Some issues are possible. Can read more in: [Troubleshooting GUI Linux apps on openSUSE on WSLg](https://boxofcables.dev/why-do-apps-look-weird-on-wslg-on-opensuse/)
 
 ```bash
 sudo zypper -n install --no-recommends -t pattern gnome

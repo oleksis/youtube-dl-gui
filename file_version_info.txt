@@ -30,7 +30,7 @@ VSVersionInfo(
       StringTable(
         '000004b0',
         [StringStruct('CompanyName', 'yt-dlg'),
-        StringStruct('FileDescription', 'Youtube Downloader GUI'),
+        StringStruct('FileDescription', 'YouTube Downloader GUI'),
         StringStruct('FileVersion', '1.8.6'),
         StringStruct('InternalName', 'yt-dlg'),
         StringStruct('LegalCopyright', 'https://github.com/oleksis/youtube-dl-gui/LICENSE'),

@@ -8,7 +8,7 @@ from .utils import remove_shortcuts
 
 
 class OptionHolder:
-    """Simple data structure that holds informations for the given option.
+    """Simple data structure that holds information for the given option.
 
     Args:
         name (str): Option name. Must be a valid option name
@@ -125,7 +125,7 @@ class OptionsParser:
 
         # Create a copy of options_dictionary
         # We don't want to edit the original options dictionary
-        # and change some of the options values like 'save_path' etc..
+        # and change some of the options values like 'save_path' etc...
         options_dict = options_dictionary.copy()
 
         self._build_savepath(options_dict)
@@ -158,7 +158,7 @@ class OptionsParser:
             elif option.name == "audio_quality":
                 # If the '--audio-quality' is not already in the options list
                 # from the above branch then follow the standard procedure.
-                # We don't have to worry for the sequence in which the code
+                # We don't have to worry about the sequence in which the code
                 # will be executed since the 'audio_quality' option is placed
                 # after the 'audio_format' option in the self._ydl_options list
                 if option.flag not in options_list and option.check_requirements(
@@ -200,7 +200,7 @@ class OptionsParser:
         special_items = []
 
         for item in options_dict["cmd_args"].split():
-            # Its a special case if its already a special case
+            # It's a special case if it's already a special case
             # or an item starts with single/double quotes
             special_case = special_case or item[0] in ['"', "'"]
 
@@ -209,8 +209,8 @@ class OptionsParser:
             else:
                 options_list.append(item)
 
-            # If its a special case and we meet a double quote
-            # at the end of the item, special case is over and
+            # If it's a special case, and we meet a double quote
+            # at the end of the item, special case is over, and
             # we need to join, filter and append our special items
             # to the options list
             if special_case and item[-1] in ['"', "'"]:
@@ -224,10 +224,10 @@ class OptionsParser:
         """Build the save path.
 
         We use this method to build the value of the 'save_path' option and
-        store it back to the options dictionary.
+        store it back to the options' dictionary.
 
         Args:
-            options_dict (dict): Copy of the original options dictionary.
+            options_dict (dict): Copy of the original options' dictionary.
 
         """
         # Check OUTPUT_FORMATS values (str)
@@ -255,10 +255,10 @@ class OptionsParser:
         """Build the video format.
 
         We use this method to build the value of the 'video_format' option and
-        store it back to the options dictionary.
+        store it back to the options' dictionary.
 
         Args:
-            options_dict (dict): Copy of the original options dictionary.
+            options_dict (dict): Copy of the original options' dictionary.
 
         """
         if (
@@ -277,7 +277,7 @@ class OptionsParser:
         'max_filesize' options and store them back to options dictionary.
 
         Args:
-            options_dict (dict): Copy of the original options dictionary.
+            options_dict (dict): Copy of the original options' dictionary.
 
         """
         min_filesize = options_dict.get("min_filesize")

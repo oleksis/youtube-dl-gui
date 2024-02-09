@@ -579,7 +579,7 @@ class TestReset(unittest.TestCase):
 
     def test_reset_paused_stage(self):
         self.ditem._stage = "Paused"
-        # No need to change filanames, extension, etc
+        # No need to change filanames, extension, etc.
         # since everything in pause state has the default value
 
         self.ditem.reset()
