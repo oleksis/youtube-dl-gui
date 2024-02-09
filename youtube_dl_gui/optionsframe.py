@@ -18,7 +18,7 @@ if TYPE_CHECKING:
     from .mainframe import MainFrame
 
 _: Callable[[str], str] = wx.GetTranslation
-# REFACTOR Move all formats, etc to formats.py
+# REFACTOR Move all formats, etc. to formats.py
 
 
 class OptionsFrame(wx.Frame):

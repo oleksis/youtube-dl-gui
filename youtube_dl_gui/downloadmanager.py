@@ -12,7 +12,7 @@ Attributes:
 
 Note:
     It's not the actual module that downloads the urls
-    thats the job of the 'downloaders' module.
+    that's the job of the 'downloaders' module.
 
 """
 from __future__ import annotations
@@ -191,7 +191,7 @@ class DownloadItem:
             self.filesizes.append(to_bytes(filesize))
 
         if "status" in stats_dict:
-            # If we are post processing try to calculate the size of
+            # If we are post-processing try to calculate the size of
             # the output file since youtube-dl does not
             if (
                 stats_dict["status"] == self.ACTIVE_STAGES[2]
@@ -462,8 +462,8 @@ class DownloadManager(Thread):
         signal back to the GUI.
 
         Note:
-            It does NOT kill the workers thats the job of the
-            clean up task in the run() method.
+            It does NOT kill the workers that's the job of the
+            cleanup task in the run() method.
 
         """
         self._talk_to_gui("closing")

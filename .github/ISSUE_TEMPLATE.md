@@ -22,8 +22,8 @@ All invalid issues will be rejected!!
 - Make sure to read the [FAQs](https://github.com/oleksis/youtube-dl-gui/blob/master/docs/faqs.md) file
 
   - [ ] **I think** my problem is **NOT** with **youtube-dl**
-  - [ ] I've **verified** and **i assure** that I'm running yt-dlg **1.X.Y**
-  - [ ] **I assure** that i am using the latest version of **youtube-dl**
+  - [ ] I've **verified** and **I assure** that I'm running yt-dlg **1.X.Y**
+  - [ ] **I assure** that I am using the latest version of **youtube-dl**
   - [ ] [Searched](https://github.com/oleksis/youtube-dl-gui/issues) bugtracker
   - [ ] I've read the FAQs file
 
@@ -74,7 +74,7 @@ delete me and insert your log content here
 
 Please make sure that the requested feature is **NOT** already in the [TODO](https://github.com/oleksis/youtube-dl-gui/blob/master/TODO) list
 
-- [ ] I've **verified** and **i assure** that my requested feature is **NOT** in the TODO list
+- [ ] I've **verified** and **I assure** that my requested feature is **NOT** in the TODO list
 
 #### What operating system do you use ?
 

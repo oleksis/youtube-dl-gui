@@ -298,8 +298,8 @@ class MainFrame(wx.Frame):
         # STATUSLIST_COLUMNS
         #
         # Dictionary which contains the columns for the wxListCtrl widget.
-        # Each key represents a column and holds informations about itself.
-        # Structure informations:
+        # Each key represents a column and holds information about itself.
+        # Structure information:
         #  column_key: (column_number, column_label, minimum_width, is_resizable)
         #
         self.STATUSLIST_COLUMNS: dict[str, tuple[int, str, int, bool]] = {
@@ -680,7 +680,7 @@ class MainFrame(wx.Frame):
         )
 
         if self.update_thread is None:
-            # Dont overwrite the update messages
+            # Don't overwrite the update messages
             self._status_bar_write(msg)
 
     # noinspection PyUnusedLocal
@@ -1373,7 +1373,7 @@ class MainFrame(wx.Frame):
         the update process.
 
         Note:
-            Currently there is not way to stop the update process.
+            Currently there is no way to stop the update process.
 
         """
         if self.opt_manager.options.get("disable_update", False):

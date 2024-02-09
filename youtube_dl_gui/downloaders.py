@@ -258,7 +258,7 @@ class YoutubeDLDownloader:
         self._hook_data(data_dictionary)
 
     def _extract_info(self, data: dict[str, Any]) -> None:
-        """Extract informations about the download process from the given data.
+        """Extract information about the download process from the given data.
 
         Args:
             data (dict): Python dictionary that contains different
