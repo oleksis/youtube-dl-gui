@@ -1,0 +1,698 @@
+# yt-dlg localization file.
+# FIRST AUTHOR: Sotiris Papadopoulos <ytubedlg@gmail.com>, 2015.
+#
+# Translators:
+# Emirhan Koç <emirhankoc@protonmail.com>, 2024
+# Oleksis Fraga Menéndez, 2024
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: yt-dlg 1.8.4\n"
+"POT-Creation-Date: 2022-10-17 03:54-0400\n"
+"PO-Revision-Date: 2024-09-13 23:46+0300\n"
+"Last-Translator: Emirhan Koç <emirhankoc@protonmail.com>\n"
+"Language-Team: Turkish\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: pygettext.py 1.5\n"
+
+#: youtube_dl_gui/app.py:148
+msgid "Failed to locate CLI Backend and updates are disabled"
+msgstr "CLI Backend bulunamadı ve güncellemeler devre dışı bırakıldı"
+
+#: youtube_dl_gui/app.py:149
+msgid "Error"
+msgstr "Hata"
+
+#: youtube_dl_gui/formats.py:10
+msgid "ID"
+msgstr "ID"
+
+#: youtube_dl_gui/formats.py:11 youtube_dl_gui/mainframe.py:293
+msgid "Title"
+msgstr "Başlık"
+
+#: youtube_dl_gui/formats.py:12
+msgid "Title + ID"
+msgstr "Başlık + ID"
+
+#: youtube_dl_gui/formats.py:13
+msgid "Title + Quality"
+msgstr "Başlık + Kalite"
+
+#: youtube_dl_gui/formats.py:14
+msgid "Title + ID + Quality"
+msgstr "Başlık + ID + Kalite"
+
+#: youtube_dl_gui/formats.py:15
+msgid "Custom"
+msgstr "Özel"
+
+#: youtube_dl_gui/formats.py:18 youtube_dl_gui/mainframe.py:419
+#: youtube_dl_gui/mainframe.py:420
+msgid "default"
+msgstr "varsayılan"
+
+#: youtube_dl_gui/mainframe.py:241
+msgid "Enter URLs below"
+msgstr "URL'leri aşağıya girin"
+
+#: youtube_dl_gui/mainframe.py:242
+msgid "Update"
+msgstr "Güncelleme"
+
+#: youtube_dl_gui/mainframe.py:243
+msgid "Setting"
+msgstr "Ayar"
+
+#: youtube_dl_gui/mainframe.py:244 youtube_dl_gui/optionsframe.py:39
+msgid "Options"
+msgstr "Seçenekler"
+
+#: youtube_dl_gui/mainframe.py:245 youtube_dl_gui/optionsframe.py:748
+msgid "Stop"
+msgstr "Dur"
+
+#: youtube_dl_gui/mainframe.py:246
+msgid "Info"
+msgstr "Bilgi"
+
+#: youtube_dl_gui/mainframe.py:247
+msgid "Welcome"
+msgstr "Hoş geldiniz"
+
+#: youtube_dl_gui/mainframe.py:248 youtube_dl_gui/widgets.py:665
+msgid "Warning"
+msgstr "Uyarı"
+
+#: youtube_dl_gui/mainframe.py:249
+msgid "Add"
+msgstr "Ekle"
+
+#: youtube_dl_gui/mainframe.py:250
+msgid "Download list"
+msgstr "İndirme listesi"
+
+#: youtube_dl_gui/mainframe.py:251 youtube_dl_gui/mainframe.py:794
+#: youtube_dl_gui/mainframe.py:824
+msgid "Delete"
+msgstr "Sil"
+
+#: youtube_dl_gui/mainframe.py:252
+msgid "Play"
+msgstr "Oynat"
+
+#: youtube_dl_gui/mainframe.py:253
+msgid "Up"
+msgstr "Yukarı"
+
+#: youtube_dl_gui/mainframe.py:254
+msgid "Down"
+msgstr "Aşağı"
+
+#: youtube_dl_gui/mainframe.py:255
+msgid "Reload"
+msgstr "Yeniden Yükle"
+
+#: youtube_dl_gui/mainframe.py:256 youtube_dl_gui/mainframe.py:692
+#: youtube_dl_gui/mainframe.py:950
+msgid "Pause"
+msgstr "Durdur"
+
+#: youtube_dl_gui/mainframe.py:257 youtube_dl_gui/optionsframe.py:746
+msgid "Start"
+msgstr "Başlat"
+
+#: youtube_dl_gui/mainframe.py:258
+msgid "About"
+msgstr "Hakkında"
+
+#: youtube_dl_gui/mainframe.py:259
+msgid "View Log"
+msgstr "Günlüğü Görüntüle"
+
+#: youtube_dl_gui/mainframe.py:261
+msgid ""
+"Downloaded {0} URL(s) in {1} day(s) {2} hour(s) {3} minute(s) {4} second(s)"
+msgstr "{1} gün {2} saat {3} dakika {4} saniye içinde {0} URL İndirildi"
+
+#: youtube_dl_gui/mainframe.py:265
+msgid "Downloads completed"
+msgstr "İndirmeler tamamlandı"
+
+#: youtube_dl_gui/mainframe.py:266
+msgid ""
+"Total Progress: {0:.1f}% | Queued ({1}) Paused ({2}) Active ({3}) Completed "
+"({4}) Error ({5})"
+msgstr ""
+"Toplam İlerleme: {0:.1f}% | Kuyrukta ({1}) Duraklatılmış ({2}) Aktif ({3}) "
+"Tamamlandı ({4}) Hata ({5})"
+
+#: youtube_dl_gui/mainframe.py:270
+msgid "Stopping downloads"
+msgstr "İndirmeleri durduruluyor"
+
+#: youtube_dl_gui/mainframe.py:271
+msgid "Downloads stopped"
+msgstr "İndirmeler durduruldu"
+
+#: youtube_dl_gui/mainframe.py:272
+msgid "You need to provide at least one URL"
+msgstr "En az bir URL girmeniz gerekmektedir"
+
+#: youtube_dl_gui/mainframe.py:273
+msgid "Downloads started"
+msgstr "İndirmeler başladı"
+
+#: youtube_dl_gui/mainframe.py:274
+msgid "Choose Directory"
+msgstr "Dizin Seçin"
+
+#: youtube_dl_gui/mainframe.py:276
+msgid "Download in progress. Please wait for all downloads to complete"
+msgstr ""
+"İndirme işlemi devam ediyor. Lütfen tüm indirmelerin tamamlanmasını bekleyin"
+
+#: youtube_dl_gui/mainframe.py:279
+msgid "Update already in progress"
+msgstr "Güncelleme halihazırda devam ediyor"
+
+#: youtube_dl_gui/mainframe.py:281
+msgid "Downloading latest CLI Backend. Please wait..."
+msgstr "En son CLI Backend indiriliyor. Lütfen bekleyin..."
+
+#: youtube_dl_gui/mainframe.py:282
+msgid "CLI Backend download failed [{0}]"
+msgstr "CLI Backend indirme işlemi başarısız oldu [{0}]"
+
+#: youtube_dl_gui/mainframe.py:283
+msgid "Successfully downloaded CLI Backend."
+msgstr "CLI Backend başarıyla indirildi."
+
+#: youtube_dl_gui/mainframe.py:285
+msgid "Unable to open directory: '{dir}'. The specified path does not exist"
+msgstr "Dizin açılamıyor: '{dir}'. Belirtilen yol mevcut değil"
+
+#: youtube_dl_gui/mainframe.py:288
+msgid "Error while shutting down. Make sure you typed the correct password"
+msgstr "Kapatma sırasında hata oluştu. Doğru şifreyi yazdığınızdan emin olun"
+
+#: youtube_dl_gui/mainframe.py:291
+msgid "Shutting down system"
+msgstr "Sistem kapatılıyor"
+
+#: youtube_dl_gui/mainframe.py:294
+msgid "Extension"
+msgstr "Uzantı"
+
+#: youtube_dl_gui/mainframe.py:295
+msgid "Size"
+msgstr "Boyut"
+
+#: youtube_dl_gui/mainframe.py:296
+msgid "Percent"
+msgstr "Yüzde"
+
+#: youtube_dl_gui/mainframe.py:297
+msgid "ETA"
+msgstr "ETA"
+
+#: youtube_dl_gui/mainframe.py:298
+msgid "Speed"
+msgstr "Hız"
+
+#: youtube_dl_gui/mainframe.py:299
+msgid "Status"
+msgstr "Durum"
+
+#: youtube_dl_gui/mainframe.py:391
+msgid "Get URL"
+msgstr "URL'yi Al"
+
+#: youtube_dl_gui/mainframe.py:392
+msgid "Get command"
+msgstr "Komutu Al"
+
+#: youtube_dl_gui/mainframe.py:393 youtube_dl_gui/widgets.py:517
+msgid "Clip Multimedia"
+msgstr "Klip Al"
+
+#: youtube_dl_gui/mainframe.py:394
+msgid "Open destination"
+msgstr "Dizini Aç"
+
+#: youtube_dl_gui/mainframe.py:395
+msgid "Re-enter"
+msgstr "Tekrar indir"
+
+#: youtube_dl_gui/mainframe.py:627
+msgid "Item is active, can not set the multimedia clip"
+msgstr "Öğe aktif, klip ayarlanamıyor"
+
+#: youtube_dl_gui/mainframe.py:702
+msgid "Resume"
+msgstr "Devam et"
+
+#: youtube_dl_gui/mainframe.py:731
+msgid "Video"
+msgstr "Video"
+
+#: youtube_dl_gui/mainframe.py:735
+msgid "Audio"
+msgstr "Ses"
+
+#: youtube_dl_gui/mainframe.py:792
+msgid "Remove all"
+msgstr "Hepsini kaldır"
+
+#: youtube_dl_gui/mainframe.py:792
+msgid "Remove completed"
+msgstr "Tamamlananları kaldır"
+
+#: youtube_dl_gui/mainframe.py:793
+msgid "No items selected. Please pick an action"
+msgstr "Seçili öğe yok. Lütfen bir eylem seçin"
+
+#: youtube_dl_gui/mainframe.py:823
+msgid "Are you sure you want to remove selected items?"
+msgstr "Seçili öğeleri kaldırmak istediğinizden emin misiniz?"
+
+#: youtube_dl_gui/mainframe.py:838
+msgid "Item is active, cannot remove"
+msgstr "Öğe etkin, kaldırılamaz"
+
+#: youtube_dl_gui/mainframe.py:866
+msgid "Item is not completed"
+msgstr "Öğe tamamlanmamış"
+
+#: youtube_dl_gui/mainframe.py:974
+msgid "Update in progress. Please wait for the update to complete"
+msgstr "Güncelleme devam ediyor. Lütfen güncellemenin tamamlanmasını bekleyin"
+
+#: youtube_dl_gui/mainframe.py:1031
+msgid "Logging is disabled"
+msgstr "Günlük kaydı devre dışı"
+
+#: youtube_dl_gui/mainframe.py:1221
+msgid "Shutdown"
+msgstr "Kapatma"
+
+#: youtube_dl_gui/mainframe.py:1221
+msgid "Shutting down in {0} second(s)"
+msgstr "{0} saniye içinde kapatılıyor"
+
+#: youtube_dl_gui/mainframe.py:1319
+msgid "No items to download"
+msgstr "İndirilecek öğe yok"
+
+#: youtube_dl_gui/mainframe.py:1385
+msgid ""
+"Updates are disabled for your system. Please use the system's package "
+"manager to update the CLI Backend."
+msgstr ""
+"Güncellemeler sisteminiz için devre dışı bırakılmıştır. CLI Backend'i "
+"güncellemek için lütfen sistemin paket yöneticisini kullanın."
+
+#: youtube_dl_gui/mainframe.py:1420
+msgid "Are you sure you want to exit?"
+msgstr "Çıkmak istediğinden emin misin?"
+
+#: youtube_dl_gui/mainframe.py:1421
+msgid "Exit"
+msgstr "Çıkış"
+
+#: youtube_dl_gui/optionsframe.py:58
+msgid "Reset"
+msgstr "Sıfırla"
+
+#: youtube_dl_gui/optionsframe.py:59
+msgid "Close"
+msgstr "Kapat"
+
+#: youtube_dl_gui/optionsframe.py:71
+msgid "General"
+msgstr "Genel"
+
+#: youtube_dl_gui/optionsframe.py:72
+msgid "Formats"
+msgstr "Formatlar"
+
+#: youtube_dl_gui/optionsframe.py:73
+msgid "Downloads"
+msgstr "İndirmeler"
+
+#: youtube_dl_gui/optionsframe.py:74
+msgid "Advanced"
+msgstr "Gelişmiş"
+
+#: youtube_dl_gui/optionsframe.py:75
+msgid "Extra"
+msgstr "Ekstra"
+
+#: youtube_dl_gui/optionsframe.py:333 youtube_dl_gui/optionsframe.py:722
+msgid "Albanian"
+msgstr "Arnavutça"
+
+#: youtube_dl_gui/optionsframe.py:334
+msgid "Arabic"
+msgstr "Arapça"
+
+#: youtube_dl_gui/optionsframe.py:335
+msgid "Cuba"
+msgstr "Küba"
+
+#: youtube_dl_gui/optionsframe.py:336
+msgid "Czech"
+msgstr "Çekçe"
+
+#: youtube_dl_gui/optionsframe.py:337 youtube_dl_gui/optionsframe.py:712
+msgid "German"
+msgstr "Almanca"
+
+#: youtube_dl_gui/optionsframe.py:338 youtube_dl_gui/optionsframe.py:519
+#: youtube_dl_gui/optionsframe.py:710
+msgid "English"
+msgstr "İngilizce"
+
+#: youtube_dl_gui/optionsframe.py:339 youtube_dl_gui/optionsframe.py:711
+msgid "French"
+msgstr "Fransızca"
+
+#: youtube_dl_gui/optionsframe.py:340 youtube_dl_gui/optionsframe.py:715
+msgid "Italian"
+msgstr "İtalyanca"
+
+#: youtube_dl_gui/optionsframe.py:341
+msgid "Japanese"
+msgstr "Japonca"
+
+#: youtube_dl_gui/optionsframe.py:342
+msgid "Korean"
+msgstr "Korece"
+
+#: youtube_dl_gui/optionsframe.py:343 youtube_dl_gui/optionsframe.py:716
+msgid "Polish"
+msgstr "Lehçe"
+
+#: youtube_dl_gui/optionsframe.py:344 youtube_dl_gui/optionsframe.py:717
+msgid "Portuguese"
+msgstr "Portekizce"
+
+#: youtube_dl_gui/optionsframe.py:345 youtube_dl_gui/optionsframe.py:718
+msgid "Russian"
+msgstr "Rusça"
+
+#: youtube_dl_gui/optionsframe.py:346
+msgid "Slovak"
+msgstr "Slovakça"
+
+#: youtube_dl_gui/optionsframe.py:347 youtube_dl_gui/optionsframe.py:719
+msgid "Spanish"
+msgstr "İspanyolca"
+
+#: youtube_dl_gui/optionsframe.py:348
+msgid "Simplified Chinese"
+msgstr "Basitleştirilmiş Çince"
+
+#: youtube_dl_gui/optionsframe.py:349
+msgid "Traditional Chinese"
+msgstr "Geleneksel Çince"
+
+#: youtube_dl_gui/optionsframe.py:352
+msgid "Language"
+msgstr "Dil"
+
+#: youtube_dl_gui/optionsframe.py:357
+msgid "Filename format"
+msgstr "Dosya adı biçimi"
+
+#: youtube_dl_gui/optionsframe.py:364
+msgid "Filename options"
+msgstr "Dosya adı seçenekleri"
+
+#: youtube_dl_gui/optionsframe.py:366
+msgid "Restrict filenames to ASCII"
+msgstr "Dosya adlarını ASCII ile kısıtla"
+
+#: youtube_dl_gui/optionsframe.py:369
+msgid "More options"
+msgstr "Daha fazla seçenek"
+
+#: youtube_dl_gui/optionsframe.py:371
+msgid "Dark theme"
+msgstr "Karanlık tema"
+
+#: youtube_dl_gui/optionsframe.py:373
+msgid "Confirm on exit"
+msgstr "Çıkarken onaylama"
+
+#: youtube_dl_gui/optionsframe.py:374
+msgid "Confirm item deletion"
+msgstr "Öğe silmeyi onaylama"
+
+#: youtube_dl_gui/optionsframe.py:376
+msgid "Inform me on download completion"
+msgstr "İndirme tamamlandığında beni bilgilendir"
+
+#: youtube_dl_gui/optionsframe.py:380
+msgid "Shutdown on download completion"
+msgstr "İndirme tamamlandığında kapat"
+
+#: youtube_dl_gui/optionsframe.py:392
+msgid "SUDO password"
+msgstr "SUDO şifresi"
+
+#: youtube_dl_gui/optionsframe.py:494 youtube_dl_gui/optionsframe.py:1013
+msgid "In order for the changes to take effect please restart {0}"
+msgstr "Değişikliklerin etkili olabilmesi için lütfen {0}'i yeniden başlatın."
+
+#: youtube_dl_gui/optionsframe.py:497 youtube_dl_gui/optionsframe.py:1016
+msgid "Restart"
+msgstr "Yeniden Başlat"
+
+#: youtube_dl_gui/optionsframe.py:578
+msgid "high"
+msgstr "yüksek"
+
+#: youtube_dl_gui/optionsframe.py:579
+msgid "mid"
+msgstr "orta"
+
+#: youtube_dl_gui/optionsframe.py:580
+msgid "low"
+msgstr "düşük"
+
+#: youtube_dl_gui/optionsframe.py:583
+msgid "Video formats"
+msgstr "Video formatları"
+
+#: youtube_dl_gui/optionsframe.py:588
+msgid "Audio formats"
+msgstr "Ses formatları"
+
+#: youtube_dl_gui/optionsframe.py:593
+msgid "Post-Process options"
+msgstr "İşlem sonrası seçenekleri"
+
+#: youtube_dl_gui/optionsframe.py:594
+msgid "Keep original files"
+msgstr "Orijinal dosyaları sakla"
+
+#: youtube_dl_gui/optionsframe.py:596
+msgid "Extract audio from video file"
+msgstr "Videodan sesi dışarı çıkar"
+
+#: youtube_dl_gui/optionsframe.py:599
+msgid "Embed thumbnail in audio file"
+msgstr "Ses dosyasına küçük resim göm"
+
+#: youtube_dl_gui/optionsframe.py:601
+msgid "Add metadata to file"
+msgstr "Dosyaya metadata ekle"
+
+#: youtube_dl_gui/optionsframe.py:603
+msgid "Audio quality"
+msgstr "Ses kalitesi"
+
+#: youtube_dl_gui/optionsframe.py:713
+msgid "Greek"
+msgstr "Yunanca"
+
+#: youtube_dl_gui/optionsframe.py:714
+msgid "Hebrew"
+msgstr "İbranice"
+
+#: youtube_dl_gui/optionsframe.py:720
+msgid "Swedish"
+msgstr "İsveççe"
+
+#: youtube_dl_gui/optionsframe.py:721
+msgid "Turkish"
+msgstr "Türkçe"
+
+#: youtube_dl_gui/optionsframe.py:723
+msgid "Chinese"
+msgstr "Çince"
+
+#: youtube_dl_gui/optionsframe.py:727
+msgid "None"
+msgstr "Hiçbiri"
+
+#: youtube_dl_gui/optionsframe.py:728
+msgid "Automatic subtitles (YOUTUBE ONLY)"
+msgstr "Otomatik altyazılar (SADECE YOUTUBE)"
+
+#: youtube_dl_gui/optionsframe.py:729
+msgid "All available subtitles"
+msgstr "Mevcut tüm altyazılar"
+
+#: youtube_dl_gui/optionsframe.py:730
+msgid "Subtitles by language"
+msgstr "Dile göre altyazılar"
+
+#: youtube_dl_gui/optionsframe.py:733
+msgid "Subtitles"
+msgstr "Altyazılar"
+
+#: youtube_dl_gui/optionsframe.py:739
+msgid "Subtitles options"
+msgstr "Altyazı seçenekleri"
+
+#: youtube_dl_gui/optionsframe.py:741
+msgid "Embed subtitles into video file (mp4 ONLY)"
+msgstr "Altyazıları videoya göm (SADECE mp4)"
+
+#: youtube_dl_gui/optionsframe.py:744
+msgid "Playlist"
+msgstr "Oynatma Listesi"
+
+#: youtube_dl_gui/optionsframe.py:750 youtube_dl_gui/optionsframe.py:755
+msgid "Max"
+msgstr "Maksimum"
+
+#: youtube_dl_gui/optionsframe.py:753
+msgid "Filesize"
+msgstr "Dosya boyutu"
+
+#: youtube_dl_gui/optionsframe.py:760
+msgid "Min"
+msgstr "Minimum"
+
+#: youtube_dl_gui/optionsframe.py:914
+msgid "Retries"
+msgstr "Tekrar Denemeler"
+
+#: youtube_dl_gui/optionsframe.py:917
+msgid "Authentication"
+msgstr "Kimlik Doğrulama"
+
+#: youtube_dl_gui/optionsframe.py:919
+msgid "Username"
+msgstr "Kullanıcı Adı"
+
+#: youtube_dl_gui/optionsframe.py:921
+msgid "Password"
+msgstr "Şifre"
+
+#: youtube_dl_gui/optionsframe.py:923
+msgid "Video password"
+msgstr "Video şifresi"
+
+#: youtube_dl_gui/optionsframe.py:926
+msgid "Network"
+msgstr "Ağ"
+
+#: youtube_dl_gui/optionsframe.py:928
+msgid "Proxy"
+msgstr "Proxy"
+
+#: youtube_dl_gui/optionsframe.py:930
+msgid "User agent"
+msgstr "User agent"
+
+#: youtube_dl_gui/optionsframe.py:932
+msgid "Referer"
+msgstr "Referer"
+
+#: youtube_dl_gui/optionsframe.py:935
+msgid "Logging"
+msgstr "Günlük kaydı"
+
+#: youtube_dl_gui/optionsframe.py:938
+msgid "Enable log"
+msgstr "Günlüğü etkinleştir"
+
+#: youtube_dl_gui/optionsframe.py:940
+msgid "View"
+msgstr "Görüntüle"
+
+#: youtube_dl_gui/optionsframe.py:941
+msgid "Clear"
+msgstr "Temizle"
+
+#: youtube_dl_gui/optionsframe.py:1062
+msgid "CLI Backend"
+msgstr "CLI Backend"
+
+#: youtube_dl_gui/optionsframe.py:1066
+msgid "CLI Backend command line options (e.g. --help)"
+msgstr "CLI Backend komut satırı seçenekleri (örn: --help)"
+
+#: youtube_dl_gui/optionsframe.py:1070
+msgid "Extra options"
+msgstr "Ekstra seçenekler"
+
+#: youtube_dl_gui/optionsframe.py:1072
+msgid "Debug CLI Backend"
+msgstr "Debug CLI Backend"
+
+#: youtube_dl_gui/optionsframe.py:1073
+msgid "Ignore errors"
+msgstr "Hataları yok say"
+
+#: youtube_dl_gui/optionsframe.py:1074
+msgid "Ignore CLI Backend config"
+msgstr "CLI Backend yapılandırmasını yok say"
+
+#: youtube_dl_gui/optionsframe.py:1075
+msgid "No mtime"
+msgstr "No mtime"
+
+#: youtube_dl_gui/optionsframe.py:1076
+msgid "Prefer native HLS"
+msgstr "Yerel HLS'yi tercih et"
+
+#: youtube_dl_gui/widgets.py:373
+msgid "Yes"
+msgstr "Evet"
+
+#: youtube_dl_gui/widgets.py:374
+msgid "No"
+msgstr "Hayır"
+
+#: youtube_dl_gui/widgets.py:440 youtube_dl_gui/widgets.py:696
+msgid "Cancel"
+msgstr "İptal"
+
+#: youtube_dl_gui/widgets.py:529
+msgid "Clip start"
+msgstr "Klip başlangıcı"
+
+#: youtube_dl_gui/widgets.py:549
+msgid "Clip end"
+msgstr "Klip bitişi"
+
+#: youtube_dl_gui/widgets.py:665
+msgid "Invalid timespan"
+msgstr "Geçersiz zaman aralığı"
+
+#: youtube_dl_gui/widgets.py:695
+msgid "OK"
+msgstr "TAMAM"
+
+#: youtube_dl_gui/widgets.py:758
+msgid "Log Viewer"
+msgstr "Günlük Görüntüleyici"
