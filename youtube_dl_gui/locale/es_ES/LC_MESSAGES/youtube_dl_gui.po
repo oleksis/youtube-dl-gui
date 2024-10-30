@@ -334,7 +334,7 @@ msgstr "Salir"
 
 #: youtube_dl_gui/optionsframe.py:58
 msgid "Reset"
-msgstr "Reiniciar"
+msgstr "Reestablecer"
 
 #: youtube_dl_gui/optionsframe.py:59
 msgid "Close"
